@@ -1,0 +1,18 @@
+
+{
+    "MENU": {
+        "opt1": "Forms",
+        "opt2": "Locations",
+        "opt3": "My slogans",
+        "opt4": "Pending to synchronize",
+        "opt5": "Configuration",
+        "opt6": "Sign off"
+    },
+    "HOME": {
+        "user": "Enter your Login",
+        "pass": "Enter your Password",
+        "btn": "Enter",
+        "cred": "Remember credentials",
+        "Naccount": "I do not have an account"
+    }
+}

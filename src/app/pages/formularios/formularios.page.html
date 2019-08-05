@@ -1,0 +1,74 @@
+<ion-header no-border>
+    <ion-toolbar color="barra">
+        <ion-buttons slot="start">
+            <ion-button (click)="toggle()">
+                <ion-icon name="menu"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+        <ion-title>
+            Cloud
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon name="search"></ion-icon>
+            </ion-button>
+
+            <ion-button>
+                <ion-icon name="more"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+    <ion-list text-wrap>
+        <ion-item class="form" *ngFor="let item of forms" [routerLink]="['/formulario', item.ID]">
+            <ion-avatar slot="start" class="letra">{{ item.Name.substr(0,1)}}</ion-avatar>
+            <ion-label text-wrap>
+                <h2>{{ item.Name }}</h2>
+                <p>{{ item.Description }}</p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
+    <ion-list *ngIf="!forms">
+
+        <ion-item *ngFor="let i of [1,1,1,1,1,1,1]">
+            <ion-avatar slot="start">
+                <ion-skeleton-text animated></ion-skeleton-text>
+            </ion-avatar>
+            <ion-label>
+                <h3>
+                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                </h3>
+                <p>
+                    <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                </p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="barra">
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon slot="icon-only" name="heart"></ion-icon>
+            </ion-button>
+
+            <ion-button>
+                <ion-icon slot="icon-only" name="heart"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>

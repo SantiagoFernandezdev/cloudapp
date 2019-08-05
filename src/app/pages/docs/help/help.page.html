@@ -1,0 +1,22 @@
+
+<ion-split-pane contentId="menu-content">
+<ion-menu type="overlay" contentId="menu-content">
+    <ion-header>
+      <ion-toolbar color="dark" text-wrap>
+         
+            <ion-title slot="start" text-wrap> Visitrack Help</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="">
+      <ion-list>
+        <ion-item [routerLink]="['/help/cloud/']">   
+          <ion-icon slot="start" name="heart"></ion-icon>
+          <ion-label>Cloud</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+<ion-router-outlet id="menu-content"></ion-router-outlet>
+
+</ion-split-pane>

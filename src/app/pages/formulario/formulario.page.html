@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar color="barra">
+        <ion-buttons slot="start">
+            <ion-button (click)="toggle()">
+                <ion-icon name="menu"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
+        <ion-spinner name="crecent" *ngIf="!data"></ion-spinner>
+        <ion-title *ngFor="let item of data">
+            <h4>{{item}}</h4>
+        </ion-title>
+       
+    </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+    <ion-slides #slide  (ionSlideWillChange)="cambio();">
+        <ion-spinner name="crecent" *ngIf="!pages"></ion-spinner>
+        <ion-slide *ngFor="let item of pages; let i = index" >
+
+                <ion-list class="listForm">
+                    <ion-item-divider color="title">{{ item.tit }}</ion-item-divider>
+                        <ion-item class="item" lines="none" *ngFor="let fie of pages[i].fie" [ngSwitch]="fie.fty">
+                             <app-text-line [lab]="fie.lab" *ngSwitchCase="'text'"></app-text-line>
+                             <ion-textarea *ngSwitchCase="'textarea'"></ion-textarea>
+                             <ion-button  *ngSwitchCase="'date'" color="barra" shape="round" expand="full">{{fie.lab}}</ion-button>
+
+                             <ion-button  *ngSwitchDefault color="barra" shape="round" expand="full">{{fie.fty}}</ion-button>
+                        </ion-item>
+                </ion-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar class="ion-justify-content-between ion-align-items-center" color="medium">
+
+            <ion-buttons slot="start">
+                <ion-button  (click)="prevSlide()"> 
+                        Anterior
+                </ion-button>
+            </ion-buttons>
+
+            <ion-title class="ion-align-items-center">
+                <h5> pag <span *ngIf="pages">{{pag}}</span>/ {{pages.length}} </h5>
+            </ion-title>
+
+            <ion-buttons slot="end">
+                <ion-button *ngIf="!save" (click)="nextSlide()"> 
+                        Siguiente
+                </ion-button>
+                <ion-button *ngIf="(save === true)"> 
+                        Guardar
+                </ion-button>
+            </ion-buttons>
+
+    </ion-toolbar>
+</ion-footer>

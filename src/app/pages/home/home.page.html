@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-title>
+            <img class="img" src="/assets/images/logo_sesion.png" alt="">
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="light">
+    <form #formulario="ngForm" (ngSubmit)="onInfo()">
+        <ion-list color="light">
+
+            <ion-item mode="ios" color="light">
+                <ion-label position="floating">{{ 'HOME.user' | translate }}</ion-label>
+                <ion-input #retorno mode="ios" type="text" name="user" required [(ngModel)]="login.user"></ion-input>
+            </ion-item>
+
+            <ion-item mode="ios" color="light">
+                <ion-label position="floating">{{ 'HOME.pass' | translate }}</ion-label>
+                <ion-input clearOnEdit="false" mode="ios" [type]="passwordType" name="password" required [(ngModel)]="login.password"></ion-input>
+                <ion-icon name="eye" slot="end" (click)="showPassword()"></ion-icon>
+            </ion-item>
+
+            <ion-item color="light" lines="none">
+                <ion-checkbox [(ngModel)]="recordar.checked" name="recordar" slot="start"></ion-checkbox>
+                <ion-label>{{ 'HOME.cred' | translate }}</ion-label>
+
+            </ion-item>
+
+            <ion-button color="dark" expand="block" type="submit" [disabled]="formulario.invalid">
+                <ion-icon slot="start" name="lock"></ion-icon>
+                <ion-label>{{ 'HOME.btn' | translate }}</ion-label>
+            </ion-button>
+
+
+            <ion-item class="registrar" color="light" lines="none" text>
+                <ion-label color="primary" [routerLink]="['/registro']">{{ 'HOME.Naccount' | translate }}</ion-label>
+            </ion-item>
+        </ion-list>
+
+
+
+    </form>
+
+
+
+
+</ion-content>

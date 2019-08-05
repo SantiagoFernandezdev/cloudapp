@@ -1,0 +1,47 @@
+<ion-menu side="start" menuId="formularios" contentId="formularios" (ionWillOpen)="getdata();">
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-title class='info' text-wrap>
+                <ion-spinner *ngIf="dataUser.logo === '' && dataUser.name === ''" name="crescent"></ion-spinner>
+                <img src="{{dataUser.logo}}" width="70px" alt=""><br>
+
+                <h4 class="ion-text-wrap name">{{dataUser.name}}</h4>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content color="">
+        <ion-list class="" color="">
+            <ion-item color="" detail="true">
+                <ion-icon name="document" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt1' | translate }}</ion-label>
+            </ion-item>
+            <ion-item color="" detail="true">
+                <ion-icon name="pin" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt2' | translate }}</ion-label>
+            </ion-item>
+            <ion-item color="" detail="true">
+                <ion-icon name="calendar" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt3' | translate }}</ion-label>
+            </ion-item>
+            <ion-item color="" detail="true">
+                <ion-icon name="cloud-upload" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt4' | translate }}</ion-label>
+            </ion-item>
+            <ion-item color="" detail="true" [routerLink]="['/help/cloud']">
+                <ion-icon name="flower" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt5' | translate }}</ion-label>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+
+    <ion-footer>
+        <ion-toolbar color="barra">
+            <ion-item color="barra" (click)="closeSession()" lines="none" detail="true">
+                <ion-icon name="power" slot="start"></ion-icon>
+                <ion-label>{{ 'MENU.opt6' | translate }}</ion-label>
+            </ion-item>
+
+        </ion-toolbar>
+    </ion-footer>
+</ion-menu>

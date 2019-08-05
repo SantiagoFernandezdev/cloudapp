@@ -1,0 +1,27 @@
+.letra {
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: #FD6432;
+    color: #fff !important;
+}
+
+ion-item:nth-child(2n) .letra {
+    background: #1BA160 !important;
+}
+
+ion-title img {
+    width: 30px !important;
+    margin-right: 10px !important;
+}
+
+ion-label h3,
+ion-label p {
+    text-align: justify !important;
+}
+
+ion-item:nth-child(2n) {
+    --background: #fafafa !important;
+}

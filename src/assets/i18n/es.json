@@ -1,0 +1,18 @@
+
+{
+     "MENU": {
+         "opt1": "Formularios",
+         "opt2": "Ubicaciones",
+         "opt3": "Mis consignas",
+         "opt4": "Pendiente por sincronizar",
+         "opt5": "Configuración",
+         "opt6": "Cerrar sesión"
+     },
+     "HOME": {
+         "user": "Ingrese su usuario",
+         "pass": "Ingrese su contraseña",
+         "btn": "Ingresar",
+         "cred": "Recordar credenciales",
+         "Naccount": "No tengo una cuenta"
+     }
+ }

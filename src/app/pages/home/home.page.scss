@@ -1,0 +1,34 @@
+ion-header {
+    padding: 15px 10px !important;
+    background: var(--ion-color-dark) !important;
+}
+
+ion-header ion-title {
+    width: 100% !important;
+    text-align: center !important;
+}
+
+ion-header ion-title img {
+    width: 250px !important;
+}
+
+ion-list {
+    background: var(--ion-color-light) !important;
+}
+
+ion-list ion-input {
+    margin-bottom: 10px !important;
+}
+
+ion-button {
+    margin: 10px 0 !important;
+    height: 50px !important;
+}
+
+.button-disabled {
+    background: #333 !important;
+}
+
+.registrar {
+    text-align: center !important;
+}

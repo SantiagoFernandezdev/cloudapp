@@ -1,0 +1,9 @@
+<ion-app>
+    <app-menu></app-menu>
+    <ion-router-outlet id="formularios"></ion-router-outlet>
+    <ion-footer *ngIf="status">
+        <ion-toolbar color="danger">
+            <ion-title>{{messageStatus}}</ion-title>
+        </ion-toolbar>
+    </ion-footer>
+</ion-app>
