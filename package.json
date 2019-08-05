@@ -10,13 +10,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall" :  "ng build --prod"
-  },
+    "ionic:build:prod": "ionic-app-scripts build -- --prod",
+    "heroku-postbuild": "npm run ionic:build:prod"
+    },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~7.3.8",
-    "@angular/compiler": "~7.2.2",
-    "@angular/compiler-cli": "~7.2.2",
+    
     "@angular/common": "^7.2.2",
     "@angular/core": "^7.2.2",
     "@angular/forms": "^7.2.2",
@@ -62,14 +61,16 @@
     "tslib": "^1.9.0",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.0",
     "zone.js": "~0.8.29",
-    "typescript": "~3.1.6"
+    
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
     "@angular-devkit/build-angular": "~0.13.8",
     "@angular-devkit/core": "~7.3.8",
     "@angular-devkit/schematics": "~7.3.8",
-   
+    "@angular/cli": "~7.3.8",
+    "@angular/compiler": "~7.2.2",
+    "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
     "@ionic/angular-toolkit": "~1.5.1",
     "@types/jasmine": "~2.8.8",
@@ -91,7 +92,8 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
     "ts-node": "~8.1.0",
-    "tslint": "~5.17.0"
+    "tslint": "~5.17.0",
+    "typescript": "~3.1.6"
   },
   "description": "An Ionic project",
   "cordova": {
