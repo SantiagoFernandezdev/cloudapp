@@ -6,7 +6,7 @@ app.use(express.static(path.resolve(__dirname, 'www')));
 app.set('port', process.env.PORT || 3000);
 
 app.all ( '*' , (req, res) => {  
-    res.status(200).sendFile (__ dirname +  '/www/index.html' );  
+    res.status(200).sendFile (__dirname +  '/www/index.html' );  
 });  
 
 app.listen(app.get('port'), () => {
