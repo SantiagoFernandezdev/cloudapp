@@ -9,13 +9,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "ionic:build:prod": "ionic-app-scripts build -- --prod",
-    "heroku-postbuild": "npm run ionic:build:prod"
-    },
+    "e2e": "ng e2e"
+  },
   "private": true,
   "dependencies": {
-    
     "@angular/common": "^7.2.2",
     "@angular/core": "^7.2.2",
     "@angular/forms": "^7.2.2",
@@ -60,8 +57,7 @@
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "1.1.0",
-    "zone.js": "~0.8.29",
-    
+    "zone.js": "~0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
