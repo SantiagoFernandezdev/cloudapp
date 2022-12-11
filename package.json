@@ -50,7 +50,7 @@
     "cordova-sqlite-storage": "3.2.0",
     "core-js": "^2.5.4",
     "es6-promise-plugin": "^4.2.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mx.ferreyra.callnumber": "0.0.2",
     "onesignal-cordova-plugin": "2.4.7",
     "path": "^0.12.7",
